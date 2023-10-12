@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="+"
+            android:textColor="@color/button_text_color"
+            android:backgroundTint="@color/button_backgroun_tint"
+            android:onClick="incrementScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="-"
+            android:textColor="@color/button_text_color"
+            android:backgroundTint="@color/button_backgroun_tint"
+            android:onClick="decrementScore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_weight="10"
+        android:textSize="100sp"
+        android:text="0"
+        android:background="@color/textview_background"
+        android:textColor="@color/textview_text_color"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+
+
+
+</LinearLayout>
