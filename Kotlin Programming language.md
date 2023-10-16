@@ -310,6 +310,227 @@ Write a program to calculate the area of a circle when the radius is entered by 
 ***Assignment 4***
 Write a kotlin program to print the square root of any given number.
 
+### Loops in Kotlin
+
+When you want to repeat a set of statements for some number of times or till the condition fails, we can employ loops. 
+
+`in` -> is a keyword in kotlin that works with range of values or a collection.
+
+**the `for` loop in kotlin**
+
+```kotlin
+fun main() {
+    for(i in 1..10){
+        println("Pavan")
+    }
+}
+```
+
+`..` -> this defines the range.
+1..10 -> it means 1 to 10
+
+***print all the numbers between 23 to 45.
+
+```kotlin
+fun main() {
+    for(i in 23..45){
+        println("$i")
+    }
+}
+```
+
+***print all the even numbers between the given range***
+
+```kotlin
+    package `in`.nareshtechnologies.kotlinessentialsforandroid
+
+    import java.util.Scanner
+
+    fun main(){
+        println("Enter the lower bound: ")
+        val s:Scanner = Scanner(System.`in`)
+        val lb = s.nextInt()
+
+        println("Enter the upper bound: ")
+        val ub = s.nextInt()
+
+        for(i in lb..ub){
+            if(i%2 == 0){
+                println(i)
+            }
+        }
+
+    }
+```
+`downTo` is a keyword that lets you come from an upper bound to a lower bound (By default, the loop counter (ie., i in the following example))decreases the value by 1 every time the loop executes.
+
+```kotlin
+
+fun main(){
+	for(i in 10 downTo 1){
+        println("$i")
+    }
+}
+```
+
+```kotlin
+/**
+ * Program to print all the odd numbers between 1 and 100*/
+
+fun main(){
+    for(i in 3..100 step 2){
+        println("$i")
+    }
+}
+```
+
+`step` is a keyword in kotlin that helps you increase the increment or decrement value of the loop counter (ie., i in this case).
+
+```kotlin
+/**
+ * Print the even numbers from 100 to 50 in reverse order*/
+
+fun main(){
+    for(i in 100 downTo 50 step 2){
+        println("$i")
+    }
+}
+```
+
+`while` & `do-while` works the same way as the ones we have in `c`, `c++`, `Java` & `python`.
+
+```kotlin
+/**
+ * program to print 1 to 10 and 10 to 1*/
+
+fun main(){
+    var i = 10
+    while(i>=1){
+        print("$i ")
+        i-- // -- is a decrement operator
+    }
+    
+    println()
+    
+    do{
+        print("$i ")
+        i++
+    }while(i<=10)
+}
+```
+
+***Please submit the test by 10:00PM today***
+
+***repeat - ibuilt function***
+```kotlin
+fun main(){
+    repeat(10){
+        println("Pavan")
+    }
+}
+```
+
+### Arrays in kotlin
+
+Array is one of the most fundamental data structure in practically all programming languages. The idea behind an array is to store multiple items of teh same data type, such as integers or strings under a single variable name. 
+
+Arrays are used to organize data in programming so that a related set of values can easily be stored or searched for. 
+
+***Important properties to make a note of***
+
+1. They are stored in contigeous memory locations.
+2. They can be accessed programmatically through their indices. 
+3. They are mutable.
+4. Their size is fixed. 
+5. The index of an array starts at 0 and ends at 1 less than the actual size. 
+
+***Create an array with the help of `arrayOf()` & `arrayOf<>()` functions. 
+
+```kotlin
+fun main(){
+    var a = arrayOf(1,2,3,4,5,6,7,8,9,10)
+    println("the size of an array is ${a.size}")
+   
+  	/**
+  	 * Access the 5th element in the array*/
+     println(a[4])
+     
+     println(a[0])
+     
+     a[0] = 89
+    
+    println(a[0])
+    
+    /**
+     * You have a predefined function called set() to set a value on a particular index you specify*/
+     
+     a.set(5,78)
+     
+     println(a[5])
+}
+```
+
+```kotlin
+fun main(){
+    var a = arrayOf(1,2,3,4,5,6,7,8,9,10)
+    println("the size of an array is ${a.size}")
+   
+  	/**
+  	 * Can we print all the items present in an array ?*/
+     for(i in 0..(a.size-1)){
+         print("${a[i]} ")
+     }
+     println()
+     
+     for(i in a){ // i in a represents each value of a copied to i
+         print("$i ")
+     }
+     println()
+     println(a.get(6)) // just like we have set method, we also have get() method that gets the value at a certain index that you specify
+}
+```
+
+```kotlin
+fun main(){
+    var a = arrayOf<Int>(1,2,3,4,5,6,7,8,9,10)
+    println("the size of an array is ${a.size}")
+   
+  	/**
+  	 * Can we print all the items present in an array ?*/
+     for(i in 0..(a.size-1)){
+         print("${a[i]} ")
+     }
+     println()
+     
+     for(i in a){ // i in a represents each value of a copied to i
+         print("$i ")
+     }
+     println()
+     println(a.get(6)) // just like we have set method, we also have get() method that gets the value at a certain index that you specify
+}
+```
+
+```kotlin
+fun main(){
+    var s = arrayOf<String>("Naresh", "IT","Technologies","Hyderabad")
+    for(i in s){
+        print("$i ")
+    }
+}
+```
+
+***Assignments***
+- Write a program to print the fibnocci series till the given number. if the given number is not a part of fibnocci series, print the fibnocci series till the nearest number of the given number. 
+- Write a program to print the average of all the values given in an array.
+
+
+
+
+
+
+
+
+
 
 
 
