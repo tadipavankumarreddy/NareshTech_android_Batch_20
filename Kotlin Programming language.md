@@ -523,7 +523,480 @@ fun main(){
 - Write a program to print the fibnocci series till the given number. if the given number is not a part of fibnocci series, print the fibnocci series till the nearest number of the given number. 
 - Write a program to print the average of all the values given in an array.
 
+```kotlin
+package `in`.nareshtechnologies.kotlinessentialsforandroid
 
+import java.util.Scanner
+fun main(){
+    println("Enter the Lower Bound:")
+    val s = Scanner(System.`in`)
+    val lb = s.nextInt()
+    println("Enter the Upper Bound:")
+    val ub = s.nextInt()
+
+    var count = 0
+    for(i in lb..ub){
+        if(i == 1){
+            println("$i is neither prime or composite")
+        }else if(primeOrNot(i)){
+            count++
+            print("$i ")
+        }
+    }
+
+    println()
+    print("The total number of prime numbers identified are $count")
+}
+
+/**
+ * What is a prime number ?
+ * a Number that has only two factors (ie., 1 and itself) is called a prime number
+ * */
+
+fun primeOrNot(a:Int):Boolean{
+    // Identify the total number of factors that a number has
+    for(i in 2..(a-1)){
+        if(a%i==0){
+            return false
+        }
+    }
+    return true
+}
+```
+
+***Assignment***
+- Find all the palindromic prime numbers between a given range.
+
+- Find the sum of the individual digits in a prime number and print those prime numbers that has the sum of their digits becoming prime number.
+
+### Using Array() constructor 
+
+```kotlin
+package `in`.nareshtechnologies.kotlinessentialsforandroid
+
+import java.util.Scanner
+fun main(){
+    println("Enter the size of the array")
+    val s = Scanner(System.`in`)
+    val l = s.nextInt()
+
+    var a = Array<Int>(l,{i->i*1})
+
+    var i = 0
+    while (i<a.size){
+        println("Enter the Array Value:")
+        val n = s.nextInt()
+        a[i] = n
+        i++
+    }
+
+    for(j in a){
+        print("$j ")
+    }
+}
+```
+
+### OOPs in Kotlin
+OOP Stands for Object Oriented Programming. 
+
+Procedural Programming is about writing the procedures or methods that operates on Data. While, OOP is about creating Objects that contain both data and methods.
+
+Advantages:
+- Faster and easier to execute
+- Provides clear structure of the program
+- OOP helps to keep the kotlin code DRY(Do not Repeat Yourself).
+- Reusability.
+
+Kotlin Objects & Classes:
+
+- Any Object in the real world entity that can have attributes and behavior. An Object is an instance (copy) of a class. 
+- A class is a blueprint of an Object.
+
+***Unlike java, Kotlin is null safe. That is the reason, the variables that you declare must be initialized or they can also accept null values if you specify explicitly with `?= `combination.***
+
+```kotlin
+package `in`.nareshtechnologies.kotlinessentialsforandroid
+
+/**
+ * Dog -> real World Entity to be programmed
+ * 3 Attributes
+ *  - name , age and weight
+ *  display()
+ *      - name age and weight*/
+
+class Dog{
+    var name:String ? = null
+    var age:Int ? =null
+    var weight:Double ? =null
+
+    fun display(){
+        println("$name of age $age is with weight $weight")
+    }
+}
+
+fun main(){
+    val d = Dog() // this is how we create an object
+    d.name = "Tommy"
+    d.age = 12
+    d.weight = 34.45
+
+    val j = Dog() // this is how we create an object
+    j.name = "Jimmy"
+    j.age = 14
+    j.weight = 4.45
+    // Both d and j are independent of each other
+    j.display()
+    d.display()
+}
+
+```
+
+***output***
+```
+Jimmy of age 14 is with weight 4.45
+Tommy of age 12 is with weight 34.45
+
+Process finished with exit code 0
+```
+
+### Constructors in kotlin
+```kotlin
+package `in`.nareshtechnologies.kotlinessentialsforandroid
+
+/**
+ * Dog -> real World Entity to be programmed
+ * 3 Attributes
+ *  - name , age and weight
+ *  display()
+ *      - name age and weight*/
+
+class Dog(var name:String?,var age:Int?,var weight:Double?){
+
+    fun display(){
+        println("$name of age $age is with weight $weight")
+    }
+}
+
+fun main(){
+    val d = Dog("Tommy",12,34.45) // this is how we create an object
+
+    val j = Dog("Jimmy",14,4.45) // this is how we create an object
+    
+    // Both d and j are independent of each other
+    j.display()
+    d.display()
+}
+
+```
+
+***output***
+```
+Jimmy of age 14 is with weight 4.45
+Tommy of age 12 is with weight 34.45
+
+Process finished with exit code 0
+```
+
+***Overloading Constructors in Kotlin**
+
+```kotlin
+package `in`.nareshtechnologies.kotlinessentialsforandroid
+
+/**
+ * Dog -> real World Entity to be programmed
+ * 3 Attributes
+ *  - name , age and weight
+ *  display()
+ *      - name age and weight*/
+
+class Dog(var name:String?,var age:Int?,var weight:Double?){
+
+    constructor(name:String):this(name,23,22.45)
+    constructor(name:String, age:Int):this(name, age, 12.34)
+    fun display(){
+        println("$name of age $age is with weight $weight")
+    }
+}
+
+fun main(){
+    val d = Dog("Tommy",12,34.45) // this is how we create an object
+
+    val j = Dog("Jimmy",14,4.45) // this is how we create an object
+
+    val k = Dog("Rocky")
+
+    val l = Dog("Saggie",13)
+    // Both d and j are independent of each other
+    j.display()
+    d.display()
+    k.display()
+    l.display()
+}
+```
+
+***output**
+```
+Jimmy of age 14 is with weight 4.45
+Tommy of age 12 is with weight 34.45
+Rocky of age 23 is with weight 22.45
+Saggie of age 13 is with weight 12.34
+
+Process finished with exit code 0
+```
+
+```kotlin
+package `in`.nareshtechnologies.kotlinessentialsforandroid
+
+import java.util.WeakHashMap
+
+/**
+ * Dog -> real World Entity to be programmed
+ * 3 Attributes
+ *  - name , age and weight
+ *  display()
+ *      - name age and weight*/
+
+class Dog{
+    var name:String?=null
+    var age:Int?=null
+    var weight:Double?=null
+
+    constructor(n:String, a:Int, w:Double){
+        name = n
+        age = a
+        weight = w
+    }
+    constructor(name:String):this(name,23,22.45)
+    constructor(name:String, age:Int):this(name, age, 12.34)
+    fun display(){
+        println("$name of age $age is with weight $weight")
+    }
+}
+
+fun main(){
+    val d = Dog("Tommy",12,34.45) // this is how we create an object
+
+    val j = Dog("Jimmy",14,4.45) // this is how we create an object
+
+    val k = Dog("Rocky")
+
+    val l = Dog("Saggie",13)
+    // Both d and j are independent of each other
+    j.display()
+    d.display()
+    k.display()
+    l.display()
+}
+
+```
+
+***Output remains the same as above***
+
+```Favorite Movie Names
+a -> Avengers End Game
+b -> Bahubali
+c -> Captain America
+d -> Don
+e -> Elementals
+f -> Fast and Furious
+g -> Godfather
+h -> Hulk
+i -> Incredibles
+J -> Joker
+```
+
+### Inheritance in kotlin
+This is another fundamentally very important concepts in OOPs. Inheritance is the process of acquiring the properties and behaviors of one class into another class.
+
+Inheritance is fundamentally used for code re-usuability. 
+
+***Important Note*** All classes in kotlin have a common super class, `Any`, which is the default super class for a class with no super class defined. 
+
+```kotlin
+class Pavan{
+    // the default super class is Any
+}
+```
+
+`Any` class has got three methods
+- equals()
+- hashCode()
+- toString()
+
+Hence, these methods are present in any class that you create.
+
+```koltin
+package `in`.nareshtechnologies.kotlinessentialsforandroid
+
+import java.util.WeakHashMap
+
+/**
+ * Dog -> real World Entity to be programmed
+ * 3 Attributes
+ *  - name , age and weight
+ *  display()
+ *      - name age and weight*/
+
+class Dog{
+    var name:String?=null
+    var age:Int?=null
+    var weight:Double?=null
+
+    constructor(n:String, a:Int, w:Double){
+        name = n
+        age = a
+        weight = w
+    }
+    constructor(name:String):this(name,23,22.45)
+    constructor(name:String, age:Int):this(name, age, 12.34)
+    fun display(){
+        println("$name of age $age is with weight $weight")
+    }
+}
+
+fun main(){
+    val d = Dog("Tommy",12,34.45) // this is how we create an object
+
+    val j = Dog("Jimmy",14,4.45) // this is how we create an object
+
+    val k = Dog("Rocky")
+
+    val l = Dog("Saggie",13)
+    // Both d and j are independent of each other
+    j.display()
+    d.display()
+    k.display()
+    l.display()
+
+    println(j.hashCode())
+    println(j.equals(d))
+    println(j.toString())
+}
+
+```
+
+***output***
+```
+Jimmy of age 14 is with weight 4.45
+Tommy of age 12 is with weight 34.45
+Rocky of age 23 is with weight 22.45
+Saggie of age 13 is with weight 12.34
+718231523
+false
+in.nareshtechnologies.kotlinessentialsforandroid.Dog@2acf57e3
+
+Process finished with exit code 0
+
+```
+
+```kotlin
+package `in`.nareshtechnologies.kotlinessentialsforandroid
+
+import java.util.WeakHashMap
+
+/**
+ * Dog -> real World Entity to be programmed
+ * 3 Attributes
+ *  - name , age and weight
+ *  display()
+ *      - name age and weight*/
+
+class Dog{
+    var name:String?=null
+    var age:Int?=null
+    var weight:Double?=null
+
+    constructor(n:String, a:Int, w:Double){
+        name = n
+        age = a
+        weight = w
+    }
+    constructor(name:String):this(name,23,22.45)
+    constructor(name:String, age:Int):this(name, age, 12.34)
+    fun display(){
+        println("$name of age $age is with weight $weight")
+    }
+}
+
+fun main(){
+    val d = Dog("Tommy",12,34.45) // this is how we create an object
+
+    val j = Dog("Jimmy",14,4.45) // this is how we create an object
+
+    val k = Dog("Rocky")
+
+    val l = Dog("Saggie",13)
+
+    val h = j
+
+    h.name = "Rummy"
+    // Both d and j are independent of each other
+    j.display()
+    d.display()
+    k.display()
+    l.display()
+
+    println(j.hashCode())
+    println(j.equals(h))
+    println("${j.toString()} ${h.toString()}")
+    println("${j.hashCode()} ${h.hashCode()}")
+}
+
+```
+***output***
+```
+Rummy of age 14 is with weight 4.45
+Tommy of age 12 is with weight 34.45
+Rocky of age 23 is with weight 22.45
+Saggie of age 13 is with weight 12.34
+718231523
+true
+in.nareshtechnologies.kotlinessentialsforandroid.Dog@2acf57e3 in.nareshtechnologies.kotlinessentialsforandroid.Dog@2acf57e3
+718231523 718231523
+```
+
+***Important Point***: In Kotlin, by default, all classes are final. Meaning, we cannot subclass a class by default. In order to subclass a class, declare the class with `open` keyword.
+
+```kotlin
+class Example // this class is final. not open for inheritance
+```
+
+open class Example // This class is open for inheritance.```
+
+In java, we use `extends` keyword to inherit a class to another class. In Kotlin, we have `:` operator doing the job of `extends`.
+
+```kotlin
+open class Base(p:Int)
+class Derived(p:Int):Base(p)
+```
+
+```koltin
+package `in`.nareshtechnologies.kotlinessentialsforandroid
+
+open class A(var name:String?,var age:Int?){
+    fun display(){
+        println("$name , $age")
+    }
+}
+
+class B(var n:String?,var a:Int?, var salary:Int?):A(n,a){
+    fun display2(){
+        display()
+        print(salary)
+    }
+}
+
+fun main(){
+    val b = B("Pavan",18,10000)
+    b.display2()
+}
+```
+
+```
+Pavan , 18
+10000
+Process finished with exit code 0
+```
 
 
 
