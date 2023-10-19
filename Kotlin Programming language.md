@@ -998,6 +998,74 @@ Pavan , 18
 Process finished with exit code 0
 ```
 
+### Encapsulation
+Encapsulation is a fundamental concept in OOPs. Encapsulation refers to the bundling of data and methods that operate on the data with in a single unit, is called as class. 
+
+Encapsulation is a way to hide the implementation details of a class from outside access and only exposing a public interface that can be used to interact with the class. 
+
+***Modifiers in kotlin***
+
+- ***private*** - the element that is declared private cannot be accessed from outside of the kotlin file that is defined in. These elements can only accessed in the same place where they are defined. 
+  
+- ***public*** - Elements are accessed from anywhere
+  
+- ***protected*** - same as private except that subclasses can access the class/interface elements.
+  
+- ***internal*** - Anything in the module can access these elements. 
+
+```kotlin
+package `in`.nareshtechnologies.kotlinessentialsforandroid
+
+open class Hello{
+    var a = 10
+    var b = "Pavan"
+}
+
+class Hai :Hello(){
+    fun display(){
+        println("$a & $b")
+    }
+}
+
+fun main(){
+    val h = Hai()
+    h.display()
+}
+```
+
+***output***
+```
+10 & Pavan
+```
+
+```kotlin
+package `in`.nareshtechnologies.kotlinessentialsforandroid
+
+class Internals {
+    internal var a = 10
+}
+
+fun main(){
+    val i = Internals()
+    println("${i.a}")
+}
+```
+
+```
+package `in`.nareshtechnologies.kotlinessentialsforandroid
+
+fun main(){
+    val i = Internals()
+    i.a = 90
+    println(i.a)
+}
+```
+
+***If a class with a certain functionality is defined in a different package and the elements in the class are accessible either directly (if they are declared as public) or with the help of helper methods (incase of private, protected modifiers), you write the import statement to import that module or a specific class***
+
+***If a class in the same module (Package) needs to be accessed, you can access it directly. No need import statements***
+
+
 
 
 

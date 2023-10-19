@@ -1,19 +1,27 @@
 package `in`.nareshtechnologies.kotlinessentialsforandroid
 
-open class A(var name:String?,var age:Int?){
-    fun display(){
-        println("$name , $age")
+open class Hello{
+    private var a = 10
+    private var b = "Pavan"
+
+    fun setValue(num:Int, name:String){
+        a = num
+        b = name
+    }
+
+    fun getValue():String{
+        return "$a & $b"
     }
 }
 
-class B(var n:String?,var a:Int?, var salary:Int?):A(n,a){
-    fun display2(){
-        display()
-        print(salary)
+class Hai :Hello(){
+    fun display(){
+        setValue(20,"Kumar")
+        println(getValue())
     }
 }
 
 fun main(){
-    val b = B("Pavan",18,10000)
-    b.display2()
+    val h = Hai()
+    h.display()
 }
