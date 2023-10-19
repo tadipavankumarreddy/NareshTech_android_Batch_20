@@ -1065,8 +1065,122 @@ fun main(){
 
 ***If a class in the same module (Package) needs to be accessed, you can access it directly. No need import statements***
 
+### Polymorphism in Kotlin
 
+Existence in multiple forms is called polymorphism. 
 
+- Overloading (Compile time polymorphism)
+```kotlin
+package `in`.nareshtechnologies.kotlinessentialsforandroid
+
+fun sum(a:Int, b:Int):Int{
+    return a+b
+}
+
+fun sum(a:Int, b:Int, c:Int) = a+b+c
+
+fun main(){
+    println(sum(10,20))
+    println(sum(10,20,30))
+}
+
+```
+- Overriding (Run-time Polymorphism)
+
+```kotlin
+package `in`.nareshtechnologies.kotlinessentialsforandroid
+
+open class First{
+    open fun sum(a:Int,b:Int) = a+b
+
+    open fun sum(a:Int, b:Int, c:Int) = a+b+c
+}
+
+class Second:First(){
+    override fun sum(a:Int, b:Int) = a+2*b
+}
+
+fun main(){
+    val s = Second()
+    println(s.sum(10,20))
+    println(s.sum(10,20,40))
+}
+```
+
+***Output***
+```
+50
+70
+
+Process finished with exit code 0
+```
+
+### Abstract Classes in Kotlin
+
+Abstract classes are those classes defined with `abstract` keyword. In an abstract class, we can have methods with body and without body.
+
+```kotlin
+package `in`.nareshtechnologies.kotlinessentialsforandroid
+
+abstract class Shape{
+    abstract fun calculateArea():Double
+
+    fun printDescription(){
+        println("This is a shape")
+    }
+}
+
+class Circle(val radius:Double):Shape(){
+    override fun calculateArea(): Double {
+        return Math.PI * radius * radius
+    }
+
+}
+
+fun main(){
+    val c:Circle = Circle(12.23)
+    println(c.calculateArea())
+    c.printDescription()
+}
+```
+
+***Output***
+```
+469.8971238161208
+This is a shape
+```
+
+***Another Example***
+
+```kotlin
+package `in`.nareshtechnologies.kotlinessentialsforandroid
+
+abstract class RBI{
+
+    /***This function is not open to override - so all banks that fall under RBI
+     * Should be implementing the same interest rate
+     */
+    fun homeLoanInterestRate():Double{
+       return 7.65;
+    }
+
+    abstract fun personalLoan():Double
+}
+
+class SBI:RBI(){
+    override fun personalLoan(): Double {
+        return 6.2;
+    }
+}
+
+class ICICI:RBI(){
+    override fun personalLoan(): Double {
+        return 7.8;
+    }
+
+}
+
+```
 
 
 
