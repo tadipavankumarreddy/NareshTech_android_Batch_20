@@ -1179,8 +1179,291 @@ class ICICI:RBI(){
     }
 
 }
+```
+
+### Interfaces in kotlin
+
+`abstract` classes cannot provide 100% of abstraction all the time. Because in abstract classes we can have functions that are defined as abstract along with normal functions that has implementation. That is the reason we have `Interfaces` that provide 100% of Abstraction. 
+
+- Step 1: Define an interface
+- Step 2: Implement the interface
+
+```kotlin
+package `in`.nareshtechnologies.kotlinessentialsforandroid
+
+interface Drawable{
+    fun draw()
+    val shape:String
+}
+
+class Rectangle : Drawable{
+    override fun draw() {
+        println("Drawing a Rectangle")
+    }
+
+    override val shape: String = "Rectangle"
+}
+
+fun main(){
+    val r = Rectangle()
+    r.draw()
+    println("Shape is ${r.shape}")
+}
+```
+
+***Extended Example***
+```koltin
+package `in`.nareshtechnologies.kotlinessentialsforandroid
+
+interface Drawable{
+    fun draw()
+    val shape:String
+}
+
+interface B23{
+    fun prin()
+}
+
+class Rectangle : Drawable, B23{
+    override fun draw() {
+        println("Drawing a Rectangle")
+    }
+
+    override val shape: String = "Rectangle"
+    override fun prin() {
+        println("B23")
+    }
+}
+
+fun main(){
+    val r = Rectangle()
+    r.draw()
+    println("Shape is ${r.shape}")
+    r.prin()
+}
+```
 
 ```
+Drawing a Rectangle
+Shape is Rectangle
+B23
+
+Process finished with exit code 0
+```
+
+Abstract classes vs Interfaces
+
+- Abstract classes cannot provide 100% of abstraction every single time
+- Interfaces can provide 100% of Abstraction
+- Abstract classes can have abstract & normal Methods. 
+- Interfaces cannot have normal Methods. All the methods are abstract by default in an interface.
+
+### `this` keyword in kotlin
+
+`this` keyword refers to the current instance of a class. It is used to access the members if the current object. 
+
+***Accessing instance members of a class***
+
+```kotlin
+package `in`.nareshtechnologies.kotlinessentialsforandroid
+
+class Person(val name:String){
+    fun introduce(){
+        println("Hi, My name is $name")
+    }
+
+    fun printName(){
+        println("My Name is ${this.name}")
+    }
+}
+
+fun main(){
+    val p = Person("Pavan")
+    p.introduce()
+    p.printName()
+}
+```
+
+***Extended example - Disambiguating confilcting names***
+
+```kotlin
+package `in`.nareshtechnologies.kotlinessentialsforandroid
+
+class Person(val name:String){
+    fun printName(name:String){
+        println(name)
+        println(this.name)
+    }
+}
+
+fun main(){
+    val p = Person("Pavan")
+    p.printName("Kumar")
+}
+```
+
+***Accessing the outer class from the inner class***
+
+```kotlin
+package `in`.nareshtechnologies.kotlinessentialsforandroid
+
+class Outer{
+    private val name = "Outer class name"
+
+    inner class Inner23{
+        fun printName(){
+            println("Outer class name is : ${this@Outer.name}")
+        }
+    }
+}
+
+fun main(){
+    val a = Outer()
+    val b = a.Inner23()
+    b.printName()
+}
+```
+
+***Access Methods***
+
+```kotlin
+package `in`.nareshtechnologies.kotlinessentialsforandroid
+
+class MethodTest{
+    fun printSum(a:Int, b:Int):Unit{
+        println(a+b)
+    }
+
+    fun printProduct(a:Int, b:Int):Unit{
+        this.printSum(a,b)
+        println(a*b)
+    }
+}
+
+fun main(){
+    val m = MethodTest()
+    m.printProduct(10,20)
+}
+```
+
+### Collections In Kotlin
+
+Kotlin provides a rich set of collection classes and functions that make working with collections easy and efficient. 
+
+Two Types of Collections in Kotlin
+- Immutable Collections
+- Mutable Collections
+
+***Immutable Collections***
+Kotlin Provides three main immutable collection types:
+- List
+- Set
+- Map
+
+Once created, these collections cannot be modified. 
+
+***mutable Collections***
+Kotlin Provides three main immutable collection types:
+- List
+- Set
+- Map
+
+Once created, these collections can be modified. 
+
+***Immutable Lists***
+```kotlin
+package `in`.nareshtechnologies.kotlinessentialsforandroid
+
+fun main(){
+    // Declare an immutable list
+    val numbers = listOf<Int>(1,2,3,4,5,6,7,8,9,10)
+
+    // Access the individual elements in the list
+    println(numbers[9])
+
+    for(i in numbers){
+        print("$i ")
+    }
+}
+```
+
+***Output***
+```
+10
+1 2 3 4 5 6 7 8 9 10 
+Process finished with exit code 0
+```
+
+***Example 2***
+```kotlin
+package `in`.nareshtechnologies.kotlinessentialsforandroid
+
+data class Item(val name:String, val age:Int)
+
+fun main(){
+    // Declare an immutable list
+    val numbers = listOf<Item>(Item("Pavan",18),
+        Item("Sanjay",20))
+
+    // Access the individual elements in the list
+    println(numbers[1])
+
+    for(i in numbers){
+        print("${i.name} ${i.age} ")
+    }
+}
+```
+
+```
+Item(name=Sanjay, age=20)
+Pavan 18 Sanjay 20 
+Process finished with exit code 0
+```
+
+***Mutable Lists***
+
+```
+package `in`.nareshtechnologies.kotlinessentialsforandroid
+
+data class Item(val name:String, val age:Int)
+
+fun main(){
+   val n = mutableListOf<Item>()
+
+    n.add(Item("Raja", 62))
+    n.add(Item("Rani", 34))
+    n.add(Item("Pavan",12))
+
+    n.remove(Item("Rani",34))
+
+    n.addAll(0, listOf<Item>(Item("Priya",23), Item("Shakti", 33)))
+    for(i in n){
+        println("${i.name} ${i.age}")
+    }
+
+
+}
+```
+
+```
+Priya 23
+Shakti 33
+Raja 62
+Pavan 12
+
+Process finished with exit code 0
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
 

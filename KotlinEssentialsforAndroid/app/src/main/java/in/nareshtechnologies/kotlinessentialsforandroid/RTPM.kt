@@ -1,26 +1,20 @@
 package `in`.nareshtechnologies.kotlinessentialsforandroid
 
-abstract class RBI{
+data class Item(val name:String, val age:Int)
 
-    /***This function is not open to override - so all banks that fall under RBI
-     * Should be implementing the same interest rate
-     */
-    fun homeLoanInterestRate():Double{
-       return 7.65;
+fun main(){
+   val n = mutableListOf<Item>()
+
+    n.add(Item("Raja", 62))
+    n.add(Item("Rani", 34))
+    n.add(Item("Pavan",12))
+
+    n.remove(Item("Rani",34))
+
+    n.addAll(1, listOf<Item>(Item("Priya",23), Item("Shakti", 33)))
+    for(i in n){
+        println("${i.name} ${i.age}")
     }
 
-    abstract fun personalLoan():Double
-}
-
-class SBI:RBI(){
-    override fun personalLoan(): Double {
-        return 6.2;
-    }
-}
-
-class ICICI:RBI(){
-    override fun personalLoan(): Double {
-        return 7.8;
-    }
 
 }
