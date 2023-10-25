@@ -1454,6 +1454,151 @@ Pavan 12
 Process finished with exit code 0
 ```
 
+***Assignment***
+Experiment with Mutable Sets, Immutable Sets, Mutable Maps & Immutable Maps. 
+
+[You can refer this link](https://kotlinlang.org/docs/collections-overview.html)
+
+### Kotlin Strings
+`String` is a class in kotlin that represents an array of char types. 
+
+Strings are immutable which means the length and elements cannot be changed afgter their creation. 
+
+```kotlin
+fun main(){
+   val ch = charArrayOf('h','e','r','o')
+    val s = String(ch)
+    println(s)
+}
+```
+
+You need not to always create a string to work around with strings. In Kotlin, Declaring a String using "" will create an escaped string. Declaring a String using """ """ will create a raw string. 
+
+```kotlin
+fun main(){
+    val s = "Hello\nHero" // Normal String
+    val s2 = """Hello\nHero""" // raw String
+    println(s)
+    println(s2)
+    println(s.length)
+    println(s2.length)
+}
+```
+
+***Indices***
+
+```kotlin
+fun main(){
+    val s = "Hero"
+    for(i in s.indices){
+        println(i)
+    }
+
+    println(s[1])
+}
+```
+
+***lastIndex***
+```kotlin
+fun main(){
+    val s = "Hero"
+    println(s.lastIndex)
+}
+```
+
+### String Functions
+`get(index):Char`
+
+```kotlin
+fun main(){
+    val s = "Hero"
+    println(s.get(3))
+}
+```
+
+`compareTo(String):Int`
+```kotlin
+fun main(){
+    val s = "Hero"
+    val s2 = "Hero"
+    println(s.compareTo(s2))
+}
+```
+
+`plus(String):String`
+
+```kotlin
+fun main(){
+    val s = "Hero"
+    val s2 = "Motors"
+    println(s.plus(s2))
+}
+```
+
+`subSequence(startIndex, endIndex):CharSequence`
+
+```kotlin
+fun main(){
+    val s = "Naresh IT Technologies"
+    println(s.subSequence(7, s.length))
+}
+```
+
+`contains(charSequence, ignoreCase):Boolean`
+
+```kotlin
+fun main(){
+    val s1 = "Kotlin Programming is Awesome"
+    val s2 = "Gram"
+
+    println(s1.contains(s2,true)) // returns true 
+    println(s1.contains(s2,false)) // returns false
+}
+```
+
+`count():Int`
+
+```kotlin
+fun main(){
+    val s1 = "Kotlin ProGramming is Awesome"
+    val s2 = "gram"
+
+    println(s1.count()) // returns true
+    println(s2.count()) // returns false
+}
+```
+
+`drop(Int):String`
+```kotlin
+fun main(){
+    val s1 = "Kotlin ProGramming is Awesome"
+    val s2 = "gram"
+
+    println(s1.drop(10))// The first 10 characters will be dropped and the 
+// remaining characters will be returned.
+}
+```
+
+// Also works on Arrays
+```kotlin
+fun main(){
+    val s1 = arrayOf(1,2,3,4,5,6,7,8,9,10)
+    println(s1.drop(5))
+}
+```
+
+`dropLast(Int):String`
+```kotlin
+fun main(){
+    val s1 = "Kotlin Programming is Awesome"
+    println(s1.dropLast(5))
+}
+```
+
+```---- The End -----```
+
+
+
 
 
 
