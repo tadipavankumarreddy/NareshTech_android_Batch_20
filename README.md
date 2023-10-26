@@ -5,3 +5,7 @@ whatever the code that is discussed and explained will be present here along wit
 
 Access My Free Ebook (Android application development using Java) [here](https://android-app-development-documentation.readthedocs.io/en/latest/)
 
+[Refer to this documentation for Material Design Components](https://developer.android.com/design/ui/mobile/guides/components/material-overview)
+
+[Refer to this for MDC](https://github.com/material-components/material-components-android/blob/master/docs/components/TextField.md)
+
