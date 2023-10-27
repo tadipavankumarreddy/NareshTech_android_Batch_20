@@ -52,41 +52,85 @@
 
     <RadioGroup
         android:id="@+id/gender_group"
-        android:layout_margin="5dp"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
 
         <TextView
-            android:text="Gender"
-            android:layout_weight="1"
-            android:textStyle="bold|italic"
             android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
             android:gravity="center"
-            android:layout_height="match_parent"/>
+            android:text="Gender"
+            android:textStyle="bold|italic" />
 
         <RadioButton
             android:id="@+id/male"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Male" />
 
         <RadioButton
             android:id="@+id/female"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Female" />
 
         <RadioButton
             android:id="@+id/nosay"
-            android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="No Interest" />
 
     </RadioGroup>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <TextView
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textStyle="bold|italic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Languages" />
+
+        <CheckBox
+            android:layout_weight="1"
+            android:id="@+id/hindi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hindi" />
+
+        <CheckBox
+            android:layout_weight="1"
+            android:id="@+id/english"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="English" />
+
+        <CheckBox
+            android:layout_weight="1"
+            android:id="@+id/marati"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Marati" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <Spinner
+        android:id="@+id/nationality"
+        android:layout_margin="5dp"
+        android:entries="@array/countries"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
 
     <Button
         android:id="@+id/submit"

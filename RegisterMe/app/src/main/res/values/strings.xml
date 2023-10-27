@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Register Me</string>
+    <!-- Entries to Display-->
+    <string-array name="countries">
+        <item>Select your nation</item>
+        <item>India</item>
+        <item>USA</item>
+        <item>UK</item>
+        <item>Germany</item>
+        <item>Russia</item>
+        <item>Norway</item>
+        <item>Sweden</item>
+        <item>finland</item>
+        <item>Canada</item>
+    </string-array>
 </resources>

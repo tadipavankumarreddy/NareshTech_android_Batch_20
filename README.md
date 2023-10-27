@@ -9,3 +9,8 @@ Access My Free Ebook (Android application development using Java) [here](https:/
 
 [Refer to this for MDC](https://github.com/material-components/material-components-android/blob/master/docs/components/TextField.md)
 
+***Whenever you have multiple items to show on a single view, you are going to need an adapter.***
+
+***For each view that can display multiple items, there will be a separate Adapter available***
+
+***We need ArrayAdapter to display multiple items on the spinner***
