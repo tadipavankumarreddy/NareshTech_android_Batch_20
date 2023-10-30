@@ -14,3 +14,26 @@ Access My Free Ebook (Android application development using Java) [here](https:/
 ***For each view that can display multiple items, there will be a separate Adapter available***
 
 ***We need ArrayAdapter to display multiple items on the spinner***
+
+[Refer for ViewBinding](https://developer.android.com/topic/libraries/view-binding)
+
+[Intents and intent filters](https://developer.android.com/guide/components/intents-filters)
+
+**Intents are messaging objects. When you send a message, it reaches to the android OS. The OS based on the message that is being sent, takes an appropriate action**
+
+**What are the basic uses of Intents?**
+- Start Activities
+- Start Services
+- Deliver a Broadcast
+
+**Intents are two types**
+- Explicit Intents
+  - These intents are responsible to open an activity from an external Application (User apps).
+  
+- Implicit Intents
+  - These intents are responsible to open an activity from an internal app (System Apps).
+
+***How an Intent Communicates ?***
+
+![ref](/intents.png)
+

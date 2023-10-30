@@ -7,6 +7,10 @@ android {
     namespace = "in.nareshtechnologies.registerme"
     compileSdk = 34
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "in.nareshtechnologies.registerme"
         minSdk = 26

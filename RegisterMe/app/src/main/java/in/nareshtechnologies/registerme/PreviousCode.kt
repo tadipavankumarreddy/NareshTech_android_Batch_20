@@ -16,19 +16,16 @@ import com.google.android.material.navigation.NavigationBarView.OnItemSelectedLi
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
-import `in`.nareshtechnologies.registerme.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener{
-
-    lateinit var binding:ActivityMainBinding
-   /* lateinit var userName:TextInputLayout
+class PreviousCode : AppCompatActivity(), AdapterView.OnItemSelectedListener{
+    lateinit var userName:TextInputLayout
     lateinit var sub:Button
     lateinit var rg:RadioGroup
     lateinit var hindi:CheckBox
     lateinit var english:CheckBox
     lateinit var marati:CheckBox
     lateinit var spinner:Spinner
-    lateinit var switchCompat:SwitchCompat*/
+    lateinit var switchCompat:SwitchCompat
     var gender:String = "Not Selected"
     var country:String = "Select Country"
     var availability:Boolean = false
@@ -36,20 +33,17 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         /*setContentView(R.layout.activity_main)*/
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        val view = binding.root
-        setContentView(view)
 
-        /*userName = findViewById(R.id.user_name)
+        userName = findViewById(R.id.user_name)
         sub = findViewById(R.id.submit)
         rg = findViewById(R.id.gender_group)
         hindi = findViewById(R.id.hindi)
         english = findViewById(R.id.english)
         marati = findViewById(R.id.marati)
         spinner = findViewById(R.id.nationality)
-        switchCompat = findViewById(R.id.availability)*/
+        switchCompat = findViewById(R.id.availability)
 
-        binding.availability.setOnCheckedChangeListener { buttonView, isChecked ->
+        switchCompat.setOnCheckedChangeListener { buttonView, isChecked ->
             availability = isChecked
         }
         // populate the data
@@ -59,11 +53,11 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener{
         val adapter:ArrayAdapter<String> = ArrayAdapter(this,android.R.layout.simple_list_item_1,items)
 
         //Once the adapter is ready, attach the adapter to the Spinner
-        binding.nationality.adapter = adapter
+        spinner.adapter = adapter
 
-        binding.nationality.onItemSelectedListener = this
+        spinner.onItemSelectedListener = this
 
-        binding.genderGroup.setOnCheckedChangeListener { group, checkedId ->
+        rg.setOnCheckedChangeListener { group, checkedId ->
             if(checkedId == R.id.male){
                 gender = "Male"
             }else if(checkedId == R.id.female){
@@ -73,15 +67,15 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener{
             }
         }
 
-        binding.submit.setOnClickListener { v->
+        sub.setOnClickListener { v->
             var lang:String = ""
-            if(binding.hindi.isChecked){
+            if(hindi.isChecked){
                 lang = lang+"Hindi\n"
             }
-            if(binding.english.isChecked){
+            if(english.isChecked){
                 lang = lang+"English\n"
             }
-            if(binding.marati.isChecked){
+            if(marati.isChecked){
                 lang = lang+"Marati\n"
             }
 
