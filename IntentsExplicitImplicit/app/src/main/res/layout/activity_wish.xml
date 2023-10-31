@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".WishActivity">
+
+    <ImageView
+        android:src="@drawable/hpb"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:textColor="#FE0002"
+        android:text="Pavan"
+        android:gravity="end"
+        android:textSize="40sp"
+        android:rotation="-25"
+        android:textStyle="bold|italic"
+        android:fontFamily="cursive"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

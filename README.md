@@ -37,3 +37,14 @@ Access My Free Ebook (Android application development using Java) [here](https:/
 
 ![ref](/intents.png)
 
+
+[Common Intents in android](https://developer.android.com/guide/components/intents-common)
+
+**Assignment**
+1. customize the app (Happy birthday) to involve a few animations
+[Link for animation](https://developer.android.com/develop/ui/views/animations/reposition-view#:~:text=One%20way%20that%20Android%20lets,or%20deceleration%20of%20the%20animation.)
+
+2. Use the Implicit intents to open a certain address on google Maps.
+
+
+
