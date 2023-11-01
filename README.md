@@ -47,4 +47,14 @@ Access My Free Ebook (Android application development using Java) [here](https:/
 2. Use the Implicit intents to open a certain address on google Maps.
 
 
+### Assignment
+- Improvise the "Register Me" app by adding another screen that displays the data coming from the first screen.
 
+### Constraint Layout in Android
+[Constraint Layout Introduction](https://developer.android.com/develop/ui/views/layout/constraint-layout)
+
+- Constraint Layout is an official Replacement of Relative Layout. 
+
+- **\>><<** -> Wrap_content
+- **|-| |-|** -> Fixed
+- **|^^| |^^|** -> Match Constraint 
