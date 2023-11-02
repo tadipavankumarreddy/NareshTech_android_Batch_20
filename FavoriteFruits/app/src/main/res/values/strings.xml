@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Favorite Fruits</string>
+    <string-array name="fruits">
+        <item>Apple</item>
+        <item>Banana</item>
+        <item>Oranges</item>
+        <item>Grapes</item>
+        <item>Mangoes</item>
+        <item>Guava</item>
+        <item>Watermelon</item>
+        <item>Poppaya</item>
+        <item>Kiwi</item>
+        <item>Dragon</item>
+    </string-array>
+</resources>
