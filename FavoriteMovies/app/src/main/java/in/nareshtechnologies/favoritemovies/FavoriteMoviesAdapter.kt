@@ -4,10 +4,12 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.google.android.material.card.MaterialCardView
 
 // TODO 5: Extend the FavoriteMoviesAdapter to RecyclerView's Adapter class
 // TODO 6: Provide the information related to the viewholder class for your Adapter
@@ -18,6 +20,8 @@ class FavoriteMoviesAdapter(val context:Context, val l:MutableList<FavMovies>)
     class FMViewholder(v: View): ViewHolder(v) {
         val iv:ImageView = v.findViewById(R.id.imageView)
         val tv:TextView = v.findViewById(R.id.textView)
+        val b:Button = v.findViewById(R.id.show_img)
+        val cv:MaterialCardView = v.findViewById(R.id.card_checked)
     }
 
     // This method inflates the template for the item that is about to be shown on the recyclerview
@@ -34,7 +38,22 @@ class FavoriteMoviesAdapter(val context:Context, val l:MutableList<FavMovies>)
     // Populate the relevant data on the returned item (Returned from onCreateViewHolder())
     override fun onBindViewHolder(holder: FMViewholder, position: Int) {
         holder.iv.setImageResource(l.get(position).image)
+        holder.iv.visibility = View.INVISIBLE
         holder.tv.text = l.get(position).name
+
+        holder.b.setOnClickListener { v->
+            holder.iv.visibility = View.VISIBLE
+            holder.b.visibility = View.INVISIBLE
+        }
+
+        holder.iv.setOnClickListener { v->
+            holder.iv.visibility = View.INVISIBLE
+            holder.b.visibility = View.VISIBLE
+        }
+
+        holder.cv.setOnClickListener { v->
+            holder.cv.isChecked = !holder.cv.isChecked
+        }
     }
 
 }

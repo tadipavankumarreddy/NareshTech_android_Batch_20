@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
     private fun prepareData():MutableList<FavMovies> {
         val l:MutableList<FavMovies> = mutableListOf()
         l.add(FavMovies("Avengers",R.drawable.a))
-        l.add(FavMovies("Bahubali",R.drawable.b))
+        l.add(FavMovies("Bahubali - The Conclusion",R.drawable.b))
         l.add(FavMovies("Captain America", R.drawable.c))
         l.add(FavMovies("Don",R.drawable.d))
         l.add(FavMovies("Eternals",R.drawable.e))
