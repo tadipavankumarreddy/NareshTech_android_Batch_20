@@ -58,3 +58,27 @@ Access My Free Ebook (Android application development using Java) [here](https:/
 - **\>><<** -> Wrap_content
 - **|-| |-|** -> Fixed
 - **|^^| |^^|** -> Match Constraint 
+
+### List View Android
+[Official Documentation](https://developer.android.com/reference/kotlin/android/widget/ListView)
+
+### Assignment
+- Create an app that lists out all your 20 favorite places along with the place names. Use CardView and Recyclerview to display the list in an attractive UI. Now, when the user clicks on a place, make sure the details activity is up and shows the user more information about the places. 
+
+### Networking in android
+
+We can connect to internet to communicate with the rest services and apis. 
+- AsyncTask (Now deprecated - It is no longer used)
+- Executors (This is a java library that helps us to connect to internet)  
+**3rd Party libraries**
+- Retrofit 
+- OkHttp  
+**1st Party Libraries**
+- Volley
+
+Public apis can be accessed from [here](https://github.com/public-apis/public-apis)
+
+[Access this Presentation](https://docs.google.com/presentation/d/1HVNyrppFuOv-6MgUCIQ-SZyZxLcK4DVKtSyI82T5R6A/edit?resourcekey=0-xuLPU518hMsSLE9bJaJ65Q#slide=id.g1880535e8d_0_323)
+
+
+

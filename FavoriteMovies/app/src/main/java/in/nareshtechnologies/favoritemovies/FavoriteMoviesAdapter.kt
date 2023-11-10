@@ -1,12 +1,14 @@
 package `in`.nareshtechnologies.favoritemovies
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.google.android.material.card.MaterialCardView
@@ -21,7 +23,7 @@ class FavoriteMoviesAdapter(val context:Context, val l:MutableList<FavMovies>)
         val iv:ImageView = v.findViewById(R.id.imageView)
         val tv:TextView = v.findViewById(R.id.textView)
         val b:Button = v.findViewById(R.id.show_img)
-        val cv:MaterialCardView = v.findViewById(R.id.card_checked)
+        val cv:CardView = v.findViewById(R.id.card_checked)
     }
 
     // This method inflates the template for the item that is about to be shown on the recyclerview
@@ -52,7 +54,8 @@ class FavoriteMoviesAdapter(val context:Context, val l:MutableList<FavMovies>)
         }
 
         holder.cv.setOnClickListener { v->
-            holder.cv.isChecked = !holder.cv.isChecked
+            val i = Intent(context,MovieDetails::class.java)
+            context.startActivity(i)
         }
     }
 
