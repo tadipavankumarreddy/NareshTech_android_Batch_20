@@ -4,8 +4,11 @@ import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.loader.content.AsyncTaskLoader
+import org.json.JSONArray
+import org.json.JSONObject
 import org.w3c.dom.Text
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -17,26 +20,34 @@ class MainActivity : AppCompatActivity() {
 
     val link:String = "https://dog-api.kinduff.com/api/facts"
     lateinit var tv:TextView
+    lateinit var progressBar:ProgressBar
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         tv = findViewById(R.id.textView)
+        progressBar = findViewById(R.id.progressbar)
         //Perform the network operation
         // TODO 1: Set the url
         // TODO 2: Perfrom fetching data from network
-        FetchData(tv).execute(link)
+        FetchData(tv, progressBar).execute(link)
     }
 
     fun getAnotherFact(view: View) {
-        FetchData(tv).execute(link)
+        progressBar.visibility = View.VISIBLE
+        FetchData(tv, progressBar).execute(link)
     }
 
-    class FetchData(val tv:TextView):AsyncTask<String,Void,String>(){
+    class FetchData(val tv:TextView, val prgBar:ProgressBar):AsyncTask<String,Void,String>(){
 
         override fun onPostExecute(result: String?) {
             super.onPostExecute(result)
-            tv.text = result
+            /*tv.text = result*/
+            prgBar.visibility = View.INVISIBLE
+            val obj:JSONObject = JSONObject(result!!)
+            val arr:JSONArray = obj.getJSONArray("facts")
+            tv.text = arr.getString(0).toString()
         }
         // This is the method that does the background operation
         override fun doInBackground(vararg params: String?): String {
