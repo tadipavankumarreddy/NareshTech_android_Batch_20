@@ -78,7 +78,12 @@ We can connect to internet to communicate with the rest services and apis.
 
 Public apis can be accessed from [here](https://github.com/public-apis/public-apis)
 
-[Access this Presentation](https://docs.google.com/presentation/d/1HVNyrppFuOv-6MgUCIQ-SZyZxLcK4DVKtSyI82T5R6A/edit?resourcekey=0-xuLPU518hMsSLE9bJaJ65Q#slide=id.g1880535e8d_0_323)
+[Access this Presentation](https://docs.google.com/presentation/d/1HVNyrppFuOv-6MgUCIQ-SZyZxLcK4DVKtSyI82T5R6A/edit?resourcekey=0-xuLPU518hMsSLE9bJaJ65Q#slide=id.g1880535e8d_0_323
+
+### Volley 
+- It is a networking library developed by Google. 
+- Its easy to implement and also faster when compared with other networking libraries
+- Know more by [clicking here](https://google.github.io/volley/)
 
 
 
