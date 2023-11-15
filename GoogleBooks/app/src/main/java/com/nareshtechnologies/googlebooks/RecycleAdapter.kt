@@ -35,8 +35,10 @@ class RecycleAdapter(val context: Context, val items:List<Items>): Adapter<Recyc
         holder.title.text = items.get(position).volumeInfo?.title
         holder.author.text = ""
         var i:Int=0
-        while(i< items.get(position).volumeInfo?.authors?.size!!){
-            holder.author.text = holder.author.text.toString()+" "+items.get(position).volumeInfo?.authors?.get(i)
+        val items = items
+        val authors = items.get(position).volumeInfo?.authors
+        while(i< authors?.size!!){
+            holder.author.text = holder.author.text.toString()+" "+authors?.get(i)
             i++
         }
     }
