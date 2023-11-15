@@ -85,5 +85,19 @@ Public apis can be accessed from [here](https://github.com/public-apis/public-ap
 - Its easy to implement and also faster when compared with other networking libraries
 - Know more by [clicking here](https://google.github.io/volley/)
 
+### Convert the Json Response to Equivalent Kotlin DataClasses
+
+- Go to this [link](https://github.com/google/gson) and add the dependency `implementation("com.google.code.gson:gson:2.10.1")`
+
+- Go to this [link](https://json2kt.com/) and paste your json response to download the equivalent data classes for your json response
+
+- Add these files to your project. Note that you can even create a sub package to hold all these files (this is not mandatory - However better organisation of files will happen if you create a new package)
+
+### Image Loading Libraries
+- [Glide](https://github.com/bumptech/glide)
+- [Picasso](https://square.github.io/picasso/)
+
+
+
 
 

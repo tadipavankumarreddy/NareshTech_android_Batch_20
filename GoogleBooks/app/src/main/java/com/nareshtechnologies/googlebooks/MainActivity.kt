@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
             // Whatever you want to do with the response you get, you write it here
             probar.visibility = View.INVISIBLE
             // For Debugging you can use Log
-            /*Log.v("MAIN",response)*/
+            Log.v("MAIN",response)
             startActivity(Intent(this,DataDisplayActivity::class.java)
                 .putExtra("RES",response))
         }, Response.ErrorListener { Snackbar.make(view,"Error Occured",Snackbar.LENGTH_LONG).show() })
