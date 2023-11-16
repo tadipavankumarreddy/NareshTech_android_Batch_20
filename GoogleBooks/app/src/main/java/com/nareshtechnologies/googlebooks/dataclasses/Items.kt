@@ -1,6 +1,7 @@
 package com.nareshtechnologies.googlebooks.dataclasses
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 
 data class Items (
@@ -14,4 +15,4 @@ data class Items (
   @SerializedName("accessInfo" ) var accessInfo : AccessInfo? = AccessInfo(),
   @SerializedName("searchInfo" ) var searchInfo : SearchInfo? = SearchInfo()
 
-)
+):Serializable

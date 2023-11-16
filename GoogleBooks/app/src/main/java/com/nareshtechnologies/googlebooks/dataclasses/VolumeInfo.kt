@@ -1,6 +1,7 @@
 package com.nareshtechnologies.googlebooks.dataclasses
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 
 data class VolumeInfo (
@@ -26,4 +27,4 @@ data class VolumeInfo (
   @SerializedName("infoLink"            ) var infoLink            : String?                        = null,
   @SerializedName("canonicalVolumeLink" ) var canonicalVolumeLink : String?                        = null
 
-)
+): Serializable

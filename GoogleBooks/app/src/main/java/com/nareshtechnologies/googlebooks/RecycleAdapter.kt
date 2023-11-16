@@ -2,6 +2,7 @@ package com.nareshtechnologies.googlebooks
 
 import android.content.ClipData.Item
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,6 +41,12 @@ class RecycleAdapter(val context: Context, val items:List<Items>): Adapter<Recyc
         while(i< authors?.size!!){
             holder.author.text = holder.author.text.toString()+" "+authors?.get(i)
             i++
+        }
+
+        holder.view.setOnClickListener { v->
+            val i = Intent(context,BookDetailsActivity::class.java)
+            i.putExtra("ITEM",items.get(position))
+            context.startActivity(i)
         }
     }
 }

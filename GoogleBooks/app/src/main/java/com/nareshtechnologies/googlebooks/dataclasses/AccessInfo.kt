@@ -1,6 +1,7 @@
 package com.nareshtechnologies.googlebooks.dataclasses
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 
 data class AccessInfo (
@@ -16,4 +17,4 @@ data class AccessInfo (
   @SerializedName("accessViewStatus"       ) var accessViewStatus       : String?  = null,
   @SerializedName("quoteSharingAllowed"    ) var quoteSharingAllowed    : Boolean? = null
 
-)
+): Serializable
