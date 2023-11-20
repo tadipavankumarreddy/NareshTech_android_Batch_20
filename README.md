@@ -98,6 +98,14 @@ Public apis can be accessed from [here](https://github.com/public-apis/public-ap
 - [Picasso](https://square.github.io/picasso/)
 
 
+### Retrofit Networking Library
+[Official Document](https://square.github.io/retrofit/)
+
+### Assignments
+1. Try to do Post Request using Volley and AsyncTask as well. 
+  
+2. Pick any interesting public repository available on the github, try to finish building an app.
+
 
 
 
