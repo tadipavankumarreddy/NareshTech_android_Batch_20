@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent"
+    android:background="#030D6C"
+    android:orientation="vertical"
+    tools:context=".BlueFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tvrv"
+        android:hint="Data Comes here"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/send_data_back"
+        android:text="Send Data Back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
