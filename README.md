@@ -106,6 +106,25 @@ Public apis can be accessed from [here](https://github.com/public-apis/public-ap
   
 2. Pick any interesting public repository available on the github, try to finish building an app.
 
+### TabNavigation using ViewPager2 and TabLayout
+Explore this [link](https://developer.android.com/guide/navigation/navigation-swipe-view) for more details of the ViewPager and Lateral Navigation.
+
+***Rules to Remember***
+- You can never display an Activity over another Activity
+- You should be using a `fragment` to display different screens on an Activity.
+
+***Fragments*** 
+A fragment represents a modular portion of the user interface within an activity. A fragment has its own lifecycle, receives its own input events, and you can add or remove fragments while the containing activity is running.
+
+
+
+#### Assignment
+1. Explore `NavigationDrawer` and develop an app with the following requirements
+   1. add Multiple books details as options and they should get displayed on the left hand side as the user swipes the screen from atmost left to the center the screen.
+   2. Upon tapping each item, display the list of books from the api on the fragment using Recyclerview on the fragment. 
+
+2. Try to add recyclerview to fragment and display it as one of the four fragments on a lateral navigation model (TabNavigation).
+
 
 
 
