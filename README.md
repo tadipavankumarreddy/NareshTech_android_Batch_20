@@ -125,6 +125,77 @@ A fragment represents a modular portion of the user interface within an activity
 
 2. Try to add recyclerview to fragment and display it as one of the four fragments on a lateral navigation model (TabNavigation).
 
+### Companion Object in Koltin
 
+
+In Kotlin, a companion object is a special object that is associated with a class and shares the same name as the class. It can be accessed directly using the class name without creating an instance of the class. Companion objects are similar to static members in Java, but they have some key differences.
+
+Purpose of Companion Objects
+
+Companion objects are primarily used to define members that are shared across all instances of a class. This can be useful for functions that are related to the class itself, rather than specific instances of the class. For example, a companion object might contain a factory method for creating instances of the class, a utility function for working with the class's data, or a singleton instance of the class.
+
+Benefits of Companion Objects
+
+Companion objects offer several benefits over regular class members:
+
+Access without Instance: Companion objects can be accessed directly using the class name, eliminating the need to create an instance of the class. This makes them more convenient to use and reduces boilerplate code.
+
+Shared Members: Companion objects can define members that are shared across all instances of a class, promoting code reuse and consistency.
+
+Factory Methods: Companion objects are well-suited for implementing factory methods, which create instances of the class with specific configurations.
+
+Static-like Behavior: Companion objects provide static-like behavior in Kotlin, enabling encapsulation and preventing accidental modifications of static fields.
+
+Syntax of Companion Objects
+
+A companion object is declared within a class definition using the companion object keyword. The companion object can have its own members, including functions, properties, and nested classes.
+
+Kotlin
+class MyClass {
+    companion object {
+        fun create(): MyClass = MyClass()
+        fun getMessage(): String = "Hello from Companion Object"
+    }
+}
+Use code with caution. Learn more
+Accessing Companion Objects
+
+Companion objects can be accessed directly using the class name. For instance, to call the create() function in the MyClass example, you would write:
+
+Kotlin
+val instance = MyClass.create()
+Use code with caution. Learn more
+Similarly, to access the getMessage() function:
+
+Kotlin
+val message = MyClass.getMessage()
+Use code with caution. Learn more
+Common Uses of Companion Objects
+
+Companion objects are commonly used for:
+
+Factory Methods: Creating instances of classes with specific configurations.
+
+Singleton Classes: Managing single instances of classes.
+
+Extension Functions: Providing utility functions for the class.
+
+Static-like Members: Encapsulating and managing class-level data.
+
+In summary, companion objects provide a powerful and flexible mechanism for defining members that are shared across instances of a class in Kotlin. They offer a way to organize code, simplify access to shared functionality, and implement patterns like factory methods and singleton classes.
+
+### Navigation components
+- Navigation Graph 
+  - This is a resource that collects all the navigation related data in one place. this is typically a graph that shows all your fragments on a screen and the possible directions that a user would take.
+- NavHostFragment
+  - This navHostFragment shows various destinations from your nav graph
+- NavController
+  - This operates the whole navigation
+
+Step 1 -
+  - create a nav graph
+    - res>select android resource file > Choose navigation under the resource type > give it a name and click ok
+
+Refer this [Video](https://youtu.be/NqpyCKlYLVU?si=faByKLO9DCkUyN8g) 
 
 
