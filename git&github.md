@@ -61,6 +61,35 @@ Version Control Systems are of two kinds
 Now that you have two versions of the project and you are on the recent version.
 
 You want to switch back to first version
-   - git checkout <commit id>
+   - git checkout |commit id|
+
+### Git Branching
+Git branching helps you manage the project that runs parllely among a big team 
+
+![Picture](/ss456.png)
+
+#### How to Create a Branch ?
+- git branch |Branch Name|
+
+#### How to check the number of branches present at any given point of time ?
+- git branch
+
+In the output, the branch you are currently on will be displayed in green preceeded by an astrisk symbol (*)
+
+#### How do we switch between branches ?
+- git switch branch_name
+
+#### How to push the changes to remote repository (github)?
+- First add the remote to your git (this is just one time setup)
+  - git remote
+    - to see the remotes added to your project
+  - git remote add :Var name: :URL:
+- Push the changes to the remote repository
+  - git push :var name: :branch:
+
+git pull command helps you get the changes synchrozed
+- git pull batch_20 master
+
+
 
 
