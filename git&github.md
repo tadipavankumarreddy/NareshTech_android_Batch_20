@@ -90,6 +90,6 @@ In the output, the branch you are currently on will be displayed in green precee
 git pull command helps you get the changes synchrozed
 - git pull batch_20 master
 
-
+### Markdown Syntax - Refer the [link](/markdownsyntaxguide.md)
 
 
