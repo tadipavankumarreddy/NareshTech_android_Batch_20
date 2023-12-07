@@ -202,3 +202,24 @@ Refer this [Video](https://youtu.be/NqpyCKlYLVU?si=faByKLO9DCkUyN8g)
 
 Experiment the SQLite [here](https://sqliteonline.com/)
 
+##### Assignment 
+Try doing `update` and `delete` on SQlite Project.
+
+#### Room Database
+- Room Database is not a separate database that we have. It is a layer developed on top of SQLiteDatabase.
+- Room Database is a part of Android Jetpack that helps us to achieve the required features related database in a much fasterway.
+- Room Database works on [ORM](https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping) (Object Relational mapping), it avoids the developers to write lengthy queries. 
+- Three Major components
+  - Entity - is a dataclass that represents a table.
+    - the dataclass name becomes the table name
+    - The entries of the dataclass becomes the coloumn names
+    - @Entity annotation should be used
+  - DAO
+    - Database Access object , Interface
+    - Abstract methods that represent a query
+    - We will annotate each method with the appropriate annotation that represents the kind of query you want to run.
+  - RoomDatabase
+    - will help us to manage the whole database. 
+
+Read More about room database [here](https://developer.android.com/training/data-storage/room)
+
