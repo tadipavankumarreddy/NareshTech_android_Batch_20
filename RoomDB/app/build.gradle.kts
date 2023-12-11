@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.nareshtechnologies.roomdatabase"
+    namespace = "com.nareshtechnologies.roomdb"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.nareshtechnologies.roomdatabase"
+        applicationId = "com.nareshtechnologies.roomdb"
         minSdk = 26
         targetSdk = 33
         versionCode = 1
@@ -38,11 +38,15 @@ android {
 
 dependencies {
     val room_version = "2.6.1"
+
     implementation("androidx.room:room-runtime:$room_version")
     annotationProcessor("androidx.room:room-compiler:$room_version")
-    implementation("androidx.room:room-ktx:$room_version")
+    // To use Kotlin annotation processing tool (kapt)
     kapt("androidx.room:room-compiler:$room_version")
-    implementation("androidx.core:core-ktx:1.12.0")
+
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation("androidx.room:room-ktx:$room_version")
+    implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")

@@ -223,3 +223,12 @@ Try doing `update` and `delete` on SQlite Project.
 
 Read More about room database [here](https://developer.android.com/training/data-storage/room)
 
+### Notifications
+- Refer to the official Document [here](https://developer.android.com/develop/ui/views/notifications)
+ - Refer to the slide deck given by Google [here](https://docs.google.com/presentation/d/1D2n0-V0qG7H0YV5ZWx4rtJpjuHDBJ6m7vcvEmdYR8Ew/edit?resourcekey=0-NjY_l12AwzTN0Znqt7KY6w#slide=id.g3a6358ac69_0_152)
+- Refer to my ebook [chapter 30](https://android-app-development-documentation.readthedocs.io/en/latest/notifications.html)
+
+#### Assignment
+Just like the way we used BigPictureStyle() use BigTextStyle to display a lengthy text to the user upon expanding the notification (ex: gmail Notifications)
+
+

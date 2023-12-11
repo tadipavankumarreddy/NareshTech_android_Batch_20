@@ -8,8 +8,8 @@ import androidx.room.Query
 interface PersonDAO {
 
     @Insert
-    fun insertData(person:Person)
+    fun insertData(person:Personsss)
 
-    @Query("Select * from Person")
-    fun getData():List<Person>
+    @Query("Select * from person")
+    fun getData():List<Personsss>
 }

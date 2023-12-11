@@ -1,4 +1,4 @@
-package com.nareshtechnologies.roomdatabase
+package com.nareshtechnologies.roomdb
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,11 +8,11 @@ import android.widget.TextView
 import androidx.room.Room
 import com.google.android.material.snackbar.Snackbar
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(){
     lateinit var name:EditText
     lateinit var age:EditText
     lateinit var result:TextView
-    lateinit var room:PersonDatabase
+    lateinit var employeeDatabase: EmployeeDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,28 +22,33 @@ class MainActivity : AppCompatActivity() {
         age = findViewById(R.id.person_age)
         result = findViewById(R.id.result)
 
-        // Initializing the room database
-        room = Room.databaseBuilder(applicationContext,PersonDatabase::class.java,
-            "pavan.db")
+        employeeDatabase = Room.databaseBuilder(this,EmployeeDatabase::class.java,"Employee.db")
             .allowMainThreadQueries()
             .build()
+
     }
 
     fun saveData(view: View) {
+        // TODO 1: Save the data from name and age edittext boxes into the shared Preferences
         val n = name.text.toString()
         val a = age.text.toString().toInt()
-        // We perform the database operation
-        // tODO 1: Create the object
-        val p = Personsss(n,a)
-        room.personDao().insertData(p)
-        Snackbar.make(view,"Success",Snackbar.LENGTH_LONG).show()
+
+        val e = Employee(n,a)
+        employeeDatabase.employeeDao().insertData(e)
 
         name.text.clear()
         age.text.clear()
         name.clearFocus()
         age.clearFocus()
+        Snackbar.make(view, "Save Successful",Snackbar.LENGTH_LONG).show()
     }
-    fun loadData(view: View) {
 
+    fun loadData(view: View) {
+        val list = employeeDatabase.employeeDao().getData()
+        result.text = ""
+        for(e in list){
+            result.append("${e.emp_id}   ${e.name}    ${e.age}\n")
+        }
     }
+
 }
