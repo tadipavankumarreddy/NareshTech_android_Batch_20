@@ -231,4 +231,7 @@ Read More about room database [here](https://developer.android.com/training/data
 #### Assignment
 Just like the way we used BigPictureStyle() use BigTextStyle to display a lengthy text to the user upon expanding the notification (ex: gmail Notifications)
 
+#### Alarm Manager
+Refer to these [slides](https://docs.google.com/presentation/d/112BSR8Uep_QGZtMHcE0OVBb2rYJ7rAv_ry_l1L3fhNU/edit#slide=id.g18e5d42159_0_330)
+
 
