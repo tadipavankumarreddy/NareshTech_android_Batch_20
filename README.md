@@ -234,4 +234,10 @@ Just like the way we used BigPictureStyle() use BigTextStyle to display a length
 #### Alarm Manager
 Refer to these [slides](https://docs.google.com/presentation/d/112BSR8Uep_QGZtMHcE0OVBb2rYJ7rAv_ry_l1L3fhNU/edit#slide=id.g18e5d42159_0_330)
 
+#### Broadcast Receivers
+[Slides](https://docs.google.com/presentation/d/1qF9Yeau7uHIP7_aOHWgPU_RnfxACZzGyAZIzcJWz0R0/edit#slide=id.g188d52e48a_1_6)
+
+Learn about [Implicit Broadcast Exceptions](https://developer.android.com/guide/components/broadcast-exceptions)
+
+
 
