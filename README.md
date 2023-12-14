@@ -240,4 +240,26 @@ Refer to these [slides](https://docs.google.com/presentation/d/112BSR8Uep_QGZtMH
 Learn about [Implicit Broadcast Exceptions](https://developer.android.com/guide/components/broadcast-exceptions)
 
 
+#### Job Scheduler 
+- Intelligent Scheduling algorithm used to schedule the tasks
+- Available from API 21+
+
+The Three Major components of JobScheduler
+- JobService
+  - This is where we define the task that we want to perform
+
+- JobInfo
+  - We will set the conditions required to perform the tasks defined in the job service
+
+- JobScheduler
+  - This is a system service that schdules the jobs based on the conditions set on jobInfo object
+
+Refer to these [slides](https://docs.google.com/presentation/d/1UILCEnzR1vurX0XaFV71Ke_yyIhEJ9--iRzwVpYKLwc/edit?resourcekey=0-RTKA4Q5ubz5BcdHZ6gRt-Q#slide=id.g18e75634d0_0_172)
+
+#### Assignment
+- Get the data from chuck norries api and display it on logcat under `MAIN` tag using jobScheduler.
+  - Make sure that the device is in charging state
+  - Make sure that the device is connected to unmetered netwrok (WIFI)
+
+
 
