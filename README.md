@@ -261,5 +261,11 @@ Refer to these [slides](https://docs.google.com/presentation/d/1UILCEnzR1vurX0Xa
   - Make sure that the device is in charging state
   - Make sure that the device is connected to unmetered netwrok (WIFI)
 
+#### Work Manager
+
+[Read about it here](https://developer.android.com/reference/androidx/work/WorkManager)
+
+Implement the work manager by refering to this [document](https://developer.android.com/develop/background-work/background-tasks/persistent/getting-started#:~:text=To%20get%20started%20using%20WorkManager,library%20into%20your%20Android%20project.&text=Once%20you've%20added%20the,define%20some%20work%20to%20run.)
+
 
 
