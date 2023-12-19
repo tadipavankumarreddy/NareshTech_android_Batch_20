@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper
 // You should be extending this class to SQLiteOpenHelper
 // SQLiteOpenHelper is a pre-defined class that has helper methods to perform your
 // Database operations easily.
-class DatabaseHelper(context:Context):SQLiteOpenHelper(context,"Pavan.db",null,1) {
+class DatabaseHelper(context: Context?):SQLiteOpenHelper(context,"Pavan.db",null,1) {
 
     companion object{
         const val TABLE_NAME = "person"
@@ -30,7 +30,7 @@ class DatabaseHelper(context:Context):SQLiteOpenHelper(context,"Pavan.db",null,1
         onCreate(db)
     }
 
-    fun insertData(contentValues: ContentValues){
+    fun insertData(contentValues: ContentValues?){
         val db = this.writableDatabase
         db.insert(TABLE_NAME,null,contentValues)
     }

@@ -267,5 +267,11 @@ Refer to these [slides](https://docs.google.com/presentation/d/1UILCEnzR1vurX0Xa
 
 Implement the work manager by refering to this [document](https://developer.android.com/develop/background-work/background-tasks/persistent/getting-started#:~:text=To%20get%20started%20using%20WorkManager,library%20into%20your%20Android%20project.&text=Once%20you've%20added%20the,define%20some%20work%20to%20run.)
 
+#### Content Providers
+Provide data to the same app or a different application
+
+#### assignment
+Try the same concept using RoomDB. 
+
 
 
