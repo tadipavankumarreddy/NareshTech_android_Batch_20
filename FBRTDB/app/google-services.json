@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "383970919135",
+    "project_id": "fir-rtdb-bae86",
+    "storage_bucket": "fir-rtdb-bae86.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:383970919135:android:9c2ef46d19219a768edf6a",
+        "android_client_info": {
+          "package_name": "com.nareshtechnologies.fbrtdb"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoDHlvkHue2WdwO9_A1aKBrqyEhimPVJc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
