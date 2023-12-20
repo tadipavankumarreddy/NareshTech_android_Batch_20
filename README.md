@@ -273,5 +273,29 @@ Provide data to the same app or a different application
 #### assignment
 Try the same concept using RoomDB. 
 
+### Firebase
+Firebase is an app development platform that helps you build and grow apps and games users love. Backed by Google and trusted by millions of businesses around the world.
+
+[Link](https://firebase.google.com/docs)
+
+Prerequisites
+Install or update Android Studio to its latest version.
+
+Make sure that your project meets these requirements:
+
+Targets API level 19 (KitKat) or higher
+Uses Android 4.4 or higher
+Uses Jetpack (AndroidX), which includes meeting these version requirements:
+com.android.tools.build:gradle v7.3.0 or later
+compileSdkVersion 28 or later
+Set up a physical device or use an emulator to run your app.
+Note that Firebase SDKs with a dependency on Google Play services require the device or emulator to have Google Play services installed.
+
+Sign into Firebase using your Google account.
+
+Before using any of the firebase features, make sure you check out [this](https://firebase.google.com/docs/android/setup) documentation and complete the initial set up procedures
+
+[Real Time Databases documentation](https://firebase.google.com/docs/database/android/start)
+
 
 
