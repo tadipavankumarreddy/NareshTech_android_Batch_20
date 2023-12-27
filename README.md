@@ -297,5 +297,24 @@ Before using any of the firebase features, make sure you check out [this](https:
 
 [Real Time Databases documentation](https://firebase.google.com/docs/database/android/start)
 
+#### Assignment
+- Explore Firebase Authentication (Google Sign in Authentication).
+
+#### Services in Android
+There are 4 basic building blocks of android applications
+- Activities
+- Services
+- Broadcast Receivers
+- Content Providers
+
+A ***Service*** is an application component that can perform long-running operations in the background. **It does not provide a user interface.** Once started, a service might continue running for some time, even after the user switches to another application. Additionally, a component can bind to a service to interact with it and even perform interprocess communication (IPC). For example, a service can handle network transactions, play music, perform file I/O, or interact with a content provider, all from the background.
+
+```Caution: A service runs in the main thread of its hosting process; the service does not create its own thread and does not run in a separate process unless you specify otherwise. You should run any blocking operations on a separate thread within the service to avoid Application Not Responding (ANR) errors.```
+
+[***Types of Services***](https://developer.android.com/develop/background-work/services#Types-of-services)
+
+- Foreground
+- Background
+- Bound
 
 
