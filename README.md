@@ -318,3 +318,39 @@ A ***Service*** is an application component that can perform long-running operat
 - Bound
 
 
+[Permissions in Android](https://developer.android.com/guide/topics/permissions/overview)
+
+
+### Important Links
+
+[Receive Location Updates - Codelab](https://codelabs.developers.google.com/codelabs/while-in-use-location#0)
+
+
+[JetPack components playlist](https://www.youtube.com/watch?v=6X4ieh6rIeA&list=PLodYIve2fV8blZG0rD4PK2FUFuQcEhXcH)
+
+[Working with sensors](https://developer.android.com/codelabs/activity-recognition-transition#0)
+
+[Payment gateway Integration](https://developer.android.com/codelabs/pay-android-checkout#0)
+
+[Publish Your App on Google Play store](https://support.google.com/googleplay/android-developer/answer/9859152?hl=en)
+
+[Dart Programming for Flutter](https://dart.dev/guides)
+
+[Flutter Development environment](https://docs.flutter.dev/get-started/editor) can be set up majorly with two IDEs
+- Android Studio
+- Visual Studio Code (Open source)
+
+[Lazy vs lateinit](https://medium.com/huawei-developers/kotlin-lateinit-vs-by-lazy-initialization-example-tutorial-c19d84216480)
+
+[Coroutine Codelab](https://developer.android.com/codelabs/kotlin-coroutines#0)
+
+
+***All The best***
+Contact me @ `pavankreddy.t@gmail.com`
+
+
+
+
+
+
+
